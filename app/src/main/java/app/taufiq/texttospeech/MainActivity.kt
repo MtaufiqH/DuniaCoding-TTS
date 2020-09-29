@@ -45,15 +45,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun speak() {
         val text = et_to_speech.text.toString()
-        var pitch = seekBar_pitch.progress / 100f
-        var speed = seekBar_speed.progress / 100f
-        if (pitch < 0.1) {
-            pitch = 0.1f
-        }
+        var pitch = seekBar_pitch.progress / 50f
+        var speed = seekBar_speed.progress / 50f
+        if (pitch < 0.1) pitch = 0.1f
 
-        if (speed < 0.1) {
-            speed = 0.1f
-        }
+
+        if (speed < 0.1) speed = 0.1f
 
 
         textToSpeech.setPitch(pitch)
